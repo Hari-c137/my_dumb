@@ -1,0 +1,69 @@
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    font-family: 'Avenir', Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    // height: 100vh;
+    // overflow: hidden;
+}
+
+.styleEditor {
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+}
+.rain {
+    position: absolute;
+}
+
+.fade-in-out {
+    transition: opacity 1s ease-in-out;
+  }
+
+  .gallery-container {
+    position: fixed;
+    top: 50%;
+    left: 40%;
+    transform: translate(-50%, -50%);
+    z-index: 9999; /* Ensure the gallery is on top of other elements */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .gallery img {
+    width: auto; /* Set the desired width */
+    height: 400px; /* Set the desired height */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    filter: blur(0px); /* Add the desired blur effect */
+    object-fit: cover; /* Maintain aspect ratio and cover the container */
+    opacity: 0; /* Start with 0 opacity */
+    transition: opacity 1s ease-in-out;
+  }
+  .gallery img.active {
+    opacity: 1; /* Make the active image fully visible */
+  }
+  .gallery img.blur {
+    filter: blur(8px); /* Apply the blur effect only to images with .blur class */
+  }
+// .styleEditor {
+//     overflow: scroll;
+//     max-height: 50vh;
+//     padding: 15px;
+//     border: 1px solid rgba(255, 255, 255, .5);
+//     box-sizing: border-box;
+// }
+
+
+// .heartWrapper {
+//     width: 48vw;
+//     height: 96vh;
+//     position: relative;
+// }
